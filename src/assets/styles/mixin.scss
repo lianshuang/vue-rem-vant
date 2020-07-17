@@ -1,0 +1,28 @@
+$ratio: 375 / 10;
+
+@function px2rem($px) {
+  @return $px / $ratio + rem;
+}
+
+@mixin center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin iflex {
+  display: flex;
+}
+@mixin iflexContentCenter {
+  @include iflex;
+  justify-content: center;
+}
+@mixin iflexContentBetween {
+  @include iflex;
+  justify-content: space-between;
+}
+@mixin iflexAlignCenter {
+  @include iflex;
+  align-items: center;
+}
+
